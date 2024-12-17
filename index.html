@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repository Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Repository Finder</h1>
+        
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Enter repository name...">
+            <select id="language">
+                <option value="">All Languages</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>
+            </select>
+            <input type="number" id="min-stars" placeholder="Min Stars">
+            <input type="number" id="min-forks" placeholder="Min Forks">
+            <button id="searchButton">Search</button>
+        </div>
+
+        <div id="loading" class="hidden">Loading...</div>
+        <div id="results"></div>
+
+        <div class="pagination">
+            <button id="prevPage" disabled>Previous</button>
+            <span id="pageNumber">1</span>
+            <button id="nextPage">Next</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
